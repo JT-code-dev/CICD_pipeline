@@ -1,6 +1,5 @@
 import models from '../models/index.js';
 import db from '../config/connection.js';
-import mongoose from 'mongoose';
 
 // Define valid model names as a union type
 type ModelName = 'Question'; // Add more model names here if needed
