@@ -1,5 +1,7 @@
 import express from 'express';
-// import path from 'node:path';
+import dotenv from 'dotenv'; // ✅ NEW
+dotenv.config(); // ✅ Load .env BEFORE using process.env
+
 import db from './config/connection.js';
 import routes from './routes/index.js';
 
