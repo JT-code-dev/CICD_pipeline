@@ -9,8 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+
     steps:
-      - name: Check that secret is defined
+      - name: Debug Secret
         run: |
           if [ -z "$RENDER_DEPLOY_HOOK" ]; then
             echo "❌ RENDER_DEPLOY_HOOK is NOT set"
@@ -21,6 +24,5 @@ jobs:
 
       - name: Trigger Render Deploy Hook
         run: |
-          echo "Deploying to Render..."
-          curl $RENDER_DEPLOY_HOOK
-
+          echo "🚀 Deploying to Render..."
+          curl "$RENDER_DEPLOY_HOOK"
