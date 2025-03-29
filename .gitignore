@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+
+# Local env vars
+.env
+
+# Build output
+dist/
+build/
+
+# IDE junk
+.DS_Store
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# Logs
+*.log
+
+# Optional
+coverage/
